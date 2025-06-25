@@ -48,7 +48,7 @@ class CameraController:
             self.camera.orbit(dx, dy)
 
         elif self._mouse_pressed_buttons[QtCore.Qt.MouseButton.RightButton]:
-            self.camera.pan(dx, dy)
+            self.camera.pan(dx*-1, dy*-1)
 
     def _camera_wheel_event(self, event: QtGui.QWheelEvent):
         notches = event.angleDelta().y() / 120.0
